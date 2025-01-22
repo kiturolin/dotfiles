@@ -8,7 +8,13 @@ return{
       "MunifTanjim/nui.nvim",
         },
     config = function()
+        local neotree = require("neo-tree")
         vim.keymap.set('n', '<leader>t', ':Neotree filesystem reveal left<CR>', {})
+        neotree.setup({
+            window = {
+                width = 35,
+            }
+        })
     end
     }
 }
